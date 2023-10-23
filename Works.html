@@ -23,59 +23,241 @@
         </div>
       </div>
       <div class="wrapperContent">
-        <div class="work-header">
-          <div class="profileheader">
-            <div class="imageandtag">
-              <img src="assets/img/imageProfile.png" alt="" />
-              <div class="tag">iA</div>
+        <div class="work1class">
+          <div class="sticky-buttons">
+            <button onclick="showPopup('sharePopup')">
+              <span class="material-icons"> ios_share </span>
+            </button>
+            <button onclick="showPopup('detailsPopup')">
+              <span class="material-icons"> info_outline </span>
+            </button>
+          </div>
+
+          <div class="work-header">
+            <div class="profileheader">
+              <div class="imageandtag">
+                <img src="assets/img/imageProfile.png" alt="" />
+                <div class="tag">iA</div>
+              </div>
+              <div class="metawork data">
+                <div class="name-of-thwork">applicaiton webdesktop</div>
+                <div class="workmetacompany">
+                  <span>khalil hamdouch</span>
+                  for
+                  <span
+                    ><a href="https://siana.ma/" target="_blank">siana</a></span
+                  >
+                </div>
+              </div>
             </div>
-            <div class="metawork data">
-              <div class="name-of-thwork">applicaiton webdesktop</div>
-              <div class="workmetacompany">
-                <span>khalil hamdouch</span>
-                for
-                <span
-                  ><a href="https://siana.ma/" target="_blank">siana</a></span
-                >
+            <div>
+              <button class="workWithUsBtn">Work with us</button>
+            </div>
+          </div>
+
+          <div class="workd-container">
+            <!-- Main profile image container -->
+            <div class="profile-container">
+              <img
+                src="assets/img/thum1.png"
+                alt="Profile Picture"
+                id="mainImage1"
+                class="mainImage"
+              />
+            </div>
+            <!-- Thumbnails container -->
+            <div class="thumbnails">
+              <img
+                src="assets/img/thum1.png"
+                alt="Thumbnail 1"
+                class="thumbnail"
+                onclick="changeImage('assets/img/thum1.png')"
+              />
+              <img
+                src="assets/img/thum2.png"
+                alt="Thumbnail 2"
+                class="thumbnail"
+                onclick="changeImage('assets/img/thum2.png')"
+              />
+              <img
+                src="assets/img/thum1.png"
+                alt="Thumbnail 3"
+                class="thumbnail"
+                onclick="changeImage('assets/img/thum1.png')"
+              />
+              <!-- You can add more thumbnails as needed -->
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              Hi Folks! I am excited to share a Portfolio template hero I made
+              for Flowbase with you. I will share animated and full version
+              soon. I am curious about your ideas for now, please share with me!
+              Hope you all enjoy it. Follow Me On Behance Instagram <br />
+              oguzyagizkara@gmail.com
+            </p>
+          </div>
+
+          <div id="sharePopup" class="popup">
+            <div class="popup-content">
+              <span class="close-btn" onclick="hidePopup('sharePopup')"
+                >&times;</span
+              >
+
+              <!-- Thumbnail Image -->
+              <div class="thumbnailshaer">
+                <img src="assets/img/thum1.png" alt="Thumbnail" />
+              </div>
+
+              <p class="sharecont">
+                Share this with your social <br />
+                Community
+              </p>
+              <div class="copiedlinker">
+                <p>Copy Link:</p>
+                <div class="linkedcopy">
+                  <input
+                    type="text"
+                    value="https://yourwebsite.com/work1class"
+                    readonly
+                  />
+                  <button onclick="copyLink()">Copy</button>
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <button class="workWithUsBtn">Work with us</button>
+
+          <!-- Short Details Popup -->
+          <div id="detailsPopup" class="popup">
+            <div class="popup-content">
+              <span class="close-btn" onclick="hidePopup('detailsPopup')"
+                >&times;</span
+              >
+              <p>Keywords: [Your Keywords Here]</p>
+              <p>Description: A brief description about the work.</p>
+            </div>
           </div>
         </div>
-
-        <div class="workd-container">
-          <!-- Main profile image container -->
-          <div class="profile-container">
-            <img
-              src="assets/img/thum1.png"
-              alt="Profile Picture"
-              id="mainImage"
-              class="mainImage"
-            />
+        <div class="spliter">
+          <div class="rectspliter"></div>
+          <div class="imgspliter">
+            <img src="assets/img/imageProfile.png" alt="" />
           </div>
-          <!-- Thumbnails container -->
-          <div class="thumbnails">
-            <img
-              src="assets/img/thum1.png"
-              alt="Thumbnail 1"
-              class="thumbnail"
-              onclick="changeImage('assets/img/thum1.png')"
-            />
-            <img
-              src="assets/img/thum2.png"
-              alt="Thumbnail 2"
-              class="thumbnail"
-              onclick="changeImage('assets/img/thum2.png')"
-            />
-            <img
-              src="assets/img/thum1.png"
-              alt="Thumbnail 3"
-              class="thumbnail"
-              onclick="changeImage('assets/img/thum1.png')"
-            />
-            <!-- You can add more thumbnails as needed -->
+          <div class="rectspliter"></div>
+        </div>
+        <div class="work1class">
+          <div class="sticky-buttons">
+            <button onclick="showPopup('sharePopup')">
+              <span class="material-icons"> ios_share </span>
+            </button>
+            <button onclick="showPopup('detailsPopup')">
+              <span class="material-icons"> info_outline </span>
+            </button>
+          </div>
+
+          <div class="work-header">
+            <div class="profileheader">
+              <div class="imageandtag">
+                <img src="assets/img/imageProfile.png" alt="" />
+                <div class="tag">iA</div>
+              </div>
+              <div class="metawork data">
+                <div class="name-of-thwork">applicaiton webdesktop</div>
+                <div class="workmetacompany">
+                  <span>khalil hamdouch</span>
+                  for
+                  <span
+                    ><a href="https://siana.ma/" target="_blank">siana</a></span
+                  >
+                </div>
+              </div>
+            </div>
+            <div>
+              <button class="workWithUsBtn">Work with us</button>
+            </div>
+          </div>
+
+          <div class="workd-container">
+            <!-- Main profile image container -->
+            <div class="profile-container">
+              <img
+                src="assets/img/thum1.png"
+                alt="Profile Picture"
+                id="mainImage2"
+                class="mainImage"
+              />
+            </div>
+            <!-- Thumbnails container -->
+            <div class="thumbnails">
+              <img
+                src="assets/img/thum1.png"
+                alt="Thumbnail 1"
+                class="thumbnail"
+                onclick="changeImage('assets/img/thum1.png')"
+              />
+              <img
+                src="assets/img/thum2.png"
+                alt="Thumbnail 2"
+                class="thumbnail"
+                onclick="changeImage('assets/img/thum2.png')"
+              />
+              <img
+                src="assets/img/thum1.png"
+                alt="Thumbnail 3"
+                class="thumbnail"
+                onclick="changeImage('assets/img/thum1.png')"
+              />
+              <!-- You can add more thumbnails as needed -->
+            </div>
+          </div>
+          <div class="description">
+            <p>
+              Hi Folks! I am excited to share a Portfolio template hero I made
+              for Flowbase with you. I will share animated and full version
+              soon. I am curious about your ideas for now, please share with me!
+              Hope you all enjoy it. Follow Me On Behance Instagram <br />
+              oguzyagizkara@gmail.com
+            </p>
+          </div>
+
+          <div id="sharePopup" class="popup">
+            <div class="popup-content">
+              <span class="close-btn" onclick="hidePopup('sharePopup')"
+                >&times;</span
+              >
+
+              <!-- Thumbnail Image -->
+              <div class="thumbnailshaer">
+                <img src="assets/img/thum1.png" alt="Thumbnail" />
+              </div>
+
+              <p class="sharecont">
+                Share this with your social <br />
+                Community
+              </p>
+              <div class="copiedlinker">
+                <p>Copy Link:</p>
+                <div class="linkedcopy">
+                  <input
+                    type="text"
+                    value="https://yourwebsite.com/work1class"
+                    readonly
+                  />
+                  <button onclick="copyLink()">Copy</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Short Details Popup -->
+          <div id="detailsPopup" class="popup">
+            <div class="popup-content">
+              <span class="close-btn" onclick="hidePopup('detailsPopup')"
+                >&times;</span
+              >
+              <p>Keywords: [Your Keywords Here]</p>
+              <p>Description: A brief description about the work.</p>
+            </div>
           </div>
         </div>
       </div>
