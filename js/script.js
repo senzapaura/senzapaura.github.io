@@ -17,7 +17,7 @@ document.getElementById("contactPage").addEventListener("click", function () {
 function changeImage(src) {
   let mainImage = document.getElementById("mainImage");
   mainImage.src = src;
-  mainImage.style.transition = "opacity 0.3s";
+  mainImage.style.transition = "opacity 0.4s";
   mainImage.style.opacity = 0;
 
   setTimeout(() => {
