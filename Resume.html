@@ -1,32 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="alcontainer">
-        <div class="alheader">
-            <div class="almail">
-                <div class="almailIcon"><span class="material-icons">
-                    mail
-                    </span></div>
-                <div>khalilhamdouch60@gmail.com</div>
-            </div>
-            <div class="almenu">
-                <div class="almenuItem" id="worksPage">Works</div>
-                <div class="almenuItem" id="resumePage">Resume</div>
-                <div class="almenuItem" id="servicesPage">Services</div>
-                <div class="almenuItem" id="contactPage">Contact</div>
-            </div>
+      <div class="alheader">
+        <div class="almail">
+          <div class="almailIcon">
+            <span class="material-icons"> mail </span>
+          </div>
+          <div>khalilhamdouch60@gmail.com</div>
         </div>
-        <div class="wrapperContent">
-           
-            
+        <div class="almenu">
+          <div class="almenuItem" id="worksPage">Works</div>
+          <div class="almenuItem" id="resumePage">Resume</div>
+          <div class="almenuItem" id="servicesPage">Services</div>
+          <div class="almenuItem" id="contactPage">Contact</div>
         </div>
+      </div>
+      <div class="wrapperContent">
+        <!-- Main profile image container -->
+        <div class="profile-container">
+          <img
+            src="assets/img/thum1.png"
+            alt="Profile Picture"
+            id="mainImage"
+            class="mainImage"
+          />
+        </div>
+
+        <!-- Thumbnails container -->
+        <div class="thumbnails">
+          <img
+            src="assets/img/thum1.png"
+            alt="Thumbnail 1"
+            class="thumbnail"
+            onclick="changeImage('assets/img/thum1.png')"
+          />
+          <img
+            src="assets/img/thum2.png"
+            alt="Thumbnail 2"
+            class="thumbnail"
+            onclick="changeImage('assets/img/thum2.png')"
+          />
+          <img
+            src="assets/img/thum1.png"
+            alt="Thumbnail 3"
+            class="thumbnail"
+            onclick="changeImage('assets/img/thum1.png')"
+          />
+          <!-- You can add more thumbnails as needed -->
+        </div>
+      </div>
     </div>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>

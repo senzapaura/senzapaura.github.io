@@ -72,35 +72,37 @@ a:visited {
   border: none !important;
 }
 
-.alcontainer{
+.alcontainer {
   width: 100vw;
   height: 100vh;
 }
-.alheader{
+.alheader {
   padding: 45px 60px 30px;
   display: flex;
   justify-content: space-between;
 }
 
-.almail,.almenu{
+.almail,
+.almenu {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 25px;
 }
-.almenu{
-  font-weight:300;
+.almenu {
+  font-weight: 300;
   gap: 35px;
 }
-.almenu .almenuItem ,{
+.almenu .almenuItem {
   cursor: pointer;
 }
-.wrapperContent,.mayaHeader{
+.wrapperContent,
+.mayaHeader {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.wrapperContent .mayaHeader .imgcontainer{
+.wrapperContent .mayaHeader .imgcontainer {
   height: 200px;
   width: 200px;
   border-radius: 50%;
@@ -109,39 +111,39 @@ a:visited {
   overflow: hidden;
   justify-content: center;
 }
-.wrapperContent .mayaHeader .imgcontainer img{
+.wrapperContent .mayaHeader .imgcontainer img {
   height: 200px;
-width: 200px;
+  width: 200px;
 }
-.wrapperContent .mayaHeader h3{
+.wrapperContent .mayaHeader h3 {
   font-size: 18px;
-    padding: 15px;
-    font-weight: 400;
-    letter-spacing: 1px;
+  padding: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
 }
-.wrapperContent .quotes{
+.wrapperContent .quotes {
   width: 850px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.wrapperContent .quotes h1{
+.wrapperContent .quotes h1 {
   text-align: center;
   font-size: 80px;
 }
-.wrapperContent .quotes h4{
+.wrapperContent .quotes h4 {
   text-align: center;
   font-size: 17px;
   font-weight: 400;
   width: 393px;
 }
 
-.wrapperContent .quotes h4 span{
+.wrapperContent .quotes h4 span {
   font-weight: 600;
 }
 
-.callToAction button{
+.callToAction button {
   margin: 15px;
   background: #000;
   font-size: 15px;
@@ -152,18 +154,20 @@ width: 200px;
   border: none;
 }
 
-.almailIcon{
+.almailIcon {
   display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 42px;
-    width: 42px;
-    border-radius: 50%;
-    border: 1px solid #ccc9c9;
-    padding: 15px;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  width: 42px;
+  border-radius: 50%;
+  border: 1px solid #ccc9c9;
+  padding: 15px;
 }
 
-.almenu .almenuItem , button,.almail{
+.almenu .almenuItem,
+button,
+.almail {
   cursor: pointer;
 }
 
@@ -205,4 +209,34 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+.profile-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.mainImage {
+  max-width: 90%;
+  height: auto;
+}
+
+.thumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* space between thumbnails */
+}
+
+.thumbnail {
+  width: 100px; /* adjust based on your preference */
+  height: auto;
+  cursor: pointer;
+  transition: opacity 0.3s; /* smooth transition effect */
+}
+
+.thumbnail:hover {
+  opacity: 0.7;
 }
