@@ -135,3 +135,14 @@ function updateProgress() {
   // Enable or disable the submit button based on progress
   document.getElementById("submitButton").disabled = progressPercentage !== 100;
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.location.hash) {
+      const workId = window.location.hash.substring(1);
+      const workElement = document.getElementById(workId);
+      if (workElement) {
+          workElement.scrollIntoView({ behavior: "smooth" });
+      }
+  }
+});
