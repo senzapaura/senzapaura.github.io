@@ -36,7 +36,11 @@ function changeImage(src) {
   }, 300);
 }
 
-function showPopup(popupId) {
+function showPopup(popupId, workId) {
+  if (popupId === 'sharePopup' && workId) {
+    const linkInput = document.querySelector(".linkedcopy input");
+    linkInput.value = `https://senzapaura.github.io/Works.html#${workId}`;
+  }
   document.getElementById(popupId).style.display = "block";
 }
 
