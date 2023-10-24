@@ -114,27 +114,27 @@ if(contactForm) {
 }
 
 function updateProgress() {
-  let progressBar = document.getElementById("progressFill");
-  let nameInput = document.getElementById("nameInput");
-  let emailInput = document.getElementById("emailInput");
-  let subjectInput = document.getElementById("subjectInput");
-  let messageInput = document.getElementById("messageInput");
-  
-  let filledFields = 0;
+  const nameInput = document.getElementById("nameInput").value;
+  const emailInput = document.getElementById("emailInput").value;
+  const subjectInput = document.getElementById("subjectInput").value;
+  const messageInput = document.getElementById("messageInput").value;
 
-  // Check each input to see if it's been filled out
-  if(nameInput.value.trim() !== "") filledFields++;
-  if(emailInput.value.trim() !== "") filledFields++;
-  if(subjectInput.value !== "") filledFields++;
-  if(messageInput.value.trim() !== "") filledFields++;
+  let progress = 0;
 
-  let progressPercentage = (filledFields / 4) * 100;
+  if (nameInput) progress += 25;
+  if (emailInput) progress += 25;
+  if (subjectInput) progress += 25;
+  if (messageInput) progress += 25;
 
-  progressBar.style.width = progressPercentage + "%";
+  document.getElementById("progressFill").style.height = progress + "%";
 
-  // Enable or disable the submit button based on progress
-  document.getElementById("submitButton").disabled = progressPercentage !== 100;
+  if (progress === 100) {
+      document.getElementById("submitButton").disabled = false;
+  } else {
+      document.getElementById("submitButton").disabled = true;
+  }
 }
+
 
 
 document.addEventListener("DOMContentLoaded", function() {

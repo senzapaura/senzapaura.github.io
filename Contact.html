@@ -24,15 +24,31 @@
         </div>
         <div class="wrapperContent">
             
+<!-- Contact Form Section -->
 <div class="contact-section">
     <div class="progress-bar" id="progressBar">
         <div class="progress-fill" id="progressFill"></div>
     </div>
     <form id="contactForm" action="https://formspree.io/f/xoqorlvb" method="POST">
-        <input type="text" name="name" id="nameInput" placeholder="Your Name" onkeyup="updateProgress()">
-        <input type="email" name="_replyto" id="emailInput" placeholder="Your Email" onkeyup="updateProgress()">
-        
+        <div class="name-email">
+            <div class="namediver">
+                <label for="nameInput">Your Name</label>
+                <input type="text" name="name" id="nameInput" placeholder="Your Name" onkeyup="updateProgress()">
+            
+            </div>
+
+            <div class="namediver">
+                <label for="emailInput">Your Email</label>
+                <input type="email" name="_replyto" id="emailInput" placeholder="Your Email" onkeyup="updateProgress()">
+                
+            </div>
+           
+           
+        </div>
+
+       
         <!-- Subject Dropdown -->
+        <label for="subjectInput">Subject</label>
         <select name="subject" id="subjectInput" onchange="updateProgress()">
             <option value="" disabled selected>Select a subject</option>
             <option value="General Inquiry">General Inquiry</option>
@@ -42,13 +58,16 @@
             <!-- You can add more subjects as needed -->
         </select>
         
+        <label for="messageInput">Your Message</label>
         <textarea rows="5" name="message" id="messageInput" placeholder="Your Message" onkeyup="updateProgress()"></textarea>
-        <button type="submit" id="submitButton" disabled>Send</button>
+        
+        <button type="submit" id="submitButton" disabled>Just Send <span class="material-icons">
+            send
+            </span></button>
     </form>
+    
 </div>
-<div id="thankYouMessage" style="display: none;">
-    Thank you for your message! Redirecting in 3 seconds...
-</div>
+
             
         </div>
     </div>

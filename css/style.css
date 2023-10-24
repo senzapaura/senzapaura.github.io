@@ -599,57 +599,66 @@ button:hover {
   font-size: 14px;
   font-weight: 200;
 }
-
 .contact-section {
-  width: 80%;
+  position: relative; /* Added this line */
+  width: 65%;
   margin: 0 auto;
   padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
   background-color: #fff;
 }
 
 .progress-bar {
-  height: 10px;
-  width: 100%;
+  height: 40%;
+  width: 3px;
   background-color: #e0e0e0;
-  margin-bottom: 20px;
+  position: absolute;
+  left: -5%;
+  top: 26%;
 }
 
 .progress-fill {
-  height: 100%;
-  width: 0;
+  width: 100%; /* Adjusted from height */
+  bottom: 0; /* Starting from the bottom */
+  position: absolute;
   background-color: #4CAF50;
-  transition: width 0.4s;
+  transition: height 0.4s; /* Adjusted from width */
 }
+
 
 #contactForm input, #contactForm textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #f3f3f3;
   outline: none;
+  background: #f7f7f7;
 }
 
 #submitButton {
-  padding: 10px 20px;
-  background-color: #4CAF50;
+  padding: 10px 39px;
+  background-color: #000000;
   color: #fff;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  border-radius: 0px;
 }
 
 #submitButton:hover {
-  background-color: #45a049;
+  background-color: #202020;
 }
 #contactForm select {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #e0e0e0;
+  border: 1px solid #f3f3f3;
   outline: none;
   appearance: none; /* Removes default browser styling */
-  background-color: #fff;
+  background: #f7f7f7;
   cursor: pointer;
 }
 #thankYouMessage {
@@ -704,4 +713,43 @@ button:hover {
   text-transform: lowercase;
   font-size: 12px;
   color: #101010;
+}
+
+.name-email{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 10px;
+}
+
+.namediver{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+#contactForm{
+  color: #333;
+  font-size: 13px;
+}
+
+.resume-download {
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.resume-download h3 {
+  margin-bottom: 20px;
+}
+
+.resume-download a {
+  text-decoration: none;
+  color: #333;
+}
+
+.resume-download img {
+  vertical-align: middle;
+  margin-right: 10px;
 }
