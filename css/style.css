@@ -525,3 +525,153 @@ button:hover {
 .imgspliter img {
   width: 100px;
 }
+
+.alfooter {
+  color: #000;
+  padding: 20px 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  flex: 1;
+}
+
+.footer-brand img{
+  width: 215px;
+}
+
+.footer-brand h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.footer-links {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #959595;
+}
+
+.footer-social {
+  width: 20px;
+  flex: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: end;
+}
+
+.footer-social a {
+  color: #ffffff;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #959595;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  color: #666666;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.contact-section {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.progress-bar {
+  height: 10px;
+  width: 100%;
+  background-color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  background-color: #4CAF50;
+  transition: width 0.4s;
+}
+
+#contactForm input, #contactForm textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+}
+
+#submitButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#submitButton:hover {
+  background-color: #45a049;
+}
+#contactForm select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #e0e0e0;
+  outline: none;
+  appearance: none; /* Removes default browser styling */
+  background-color: #fff;
+  cursor: pointer;
+}
+#thankYouMessage {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 20px;
+}
+/* Initial state of the form and thank you message */
+.contact-section, #thankYouMessage {
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out; /* Smooth transition for opacity */
+  display: block;
+}
+
+.hidden {
+  opacity: 0;
+  display: none;
+  pointer-events: none; /* Ensure it doesn't capture clicks */
+  height: 0; /* Ensure it doesn't take up space */
+  overflow: hidden; /* Hide overflowing content */
+}

@@ -51,21 +51,83 @@ function copyLink() {
 }
 
 document.addEventListener("scroll", function () {
-  var element = document.querySelector(".sticky-buttons"); // your sticky element
-  var container = document.querySelector(".work1class"); // parent container
+  var workClasses = document.querySelectorAll(".work1class");
 
-  var containerBounds = container.getBoundingClientRect();
+  workClasses.forEach(function(container) {
+    var element = container.querySelector(".sticky-buttons");
+    var containerTop = container.offsetTop;
+    var containerBottom = containerTop + container.offsetHeight;
+    var stickyHeight = element.offsetHeight;
 
-  if (
-    window.scrollY >= containerBounds.top &&
-    window.scrollY <= containerBounds.bottom
-  ) {
-    // Within the container bounds, make it sticky
-    element.style.position = "fixed";
-    element.style.top = "60px";
-    element.style.right = "42px"; // or any offset you prefer
-  } else {
-    // Outside of container bounds, revert to default position
-    element.style.position = "absolut";
-  }
+    // Check the top boundary
+    if (window.scrollY + 60 >= containerTop && window.scrollY + 60 <= containerBottom - stickyHeight) {
+      // Within the container bounds, make it sticky
+      element.style.position = "fixed";
+      element.style.top = "60px";
+      element.style.right = "42px";
+    } else {
+      // Outside of container bounds, revert to default position
+      element.style.position = "absolute";
+      element.style.top = "30px"; // Resetting to original top position
+      element.style.right = "42px"; // Resetting to original right position
+    }
+  });
 });
+
+
+// Form submission
+let contactForm = document.getElementById("contactForm");
+if(contactForm) {
+    contactForm.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        let formData = new FormData(event.target);
+
+        fetch(event.target.action, {
+            method: "POST",
+            body: formData,
+            headers: {
+                "Accept": "application/json"
+            }
+        }).then(response => {
+            if(response.ok) {
+                let contactSection = document.querySelector(".contact-section");
+                let thankYouMessage = document.getElementById("thankYouMessage");
+                contactSection.classList.add("hidden");
+                setTimeout(function() {
+                    thankYouMessage.style.display = "block";
+                }, 50);
+                setTimeout(function() {
+                    window.location.href = "index.html";
+                }, 2000);
+            } else {
+                console.error("Form submission error:", response.statusText);
+            }
+        }).catch(error => {
+            console.error("Form submission error:", error);
+        });
+    });
+}
+
+function updateProgress() {
+  let progressBar = document.getElementById("progressFill");
+  let nameInput = document.getElementById("nameInput");
+  let emailInput = document.getElementById("emailInput");
+  let subjectInput = document.getElementById("subjectInput");
+  let messageInput = document.getElementById("messageInput");
+  
+  let filledFields = 0;
+
+  // Check each input to see if it's been filled out
+  if(nameInput.value.trim() !== "") filledFields++;
+  if(emailInput.value.trim() !== "") filledFields++;
+  if(subjectInput.value !== "") filledFields++;
+  if(messageInput.value.trim() !== "") filledFields++;
+
+  let progressPercentage = (filledFields / 4) * 100;
+
+  progressBar.style.width = progressPercentage + "%";
+
+  // Enable or disable the submit button based on progress
+  document.getElementById("submitButton").disabled = progressPercentage !== 100;
+}
