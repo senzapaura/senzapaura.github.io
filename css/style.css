@@ -934,3 +934,135 @@ button:hover {
 .techtat h4 {
   font-size: 14px;
 }
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+  /* Header Styles */
+  .alheader {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .almail,
+  .almenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Main Content Styles */
+  .wrapperContent .mayaHeader h3 {
+    font-size: 24px;
+  }
+
+  .wrapperContent .quotes h1 {
+    font-size: 28px;
+  }
+
+  .wrapperContent .quotes h4 {
+    font-size: 14px;
+  }
+
+  .wrapperContent .mayaHeader .imgcontainer img {
+    height: 150px;
+    width: 150px;
+  }
+
+  /* Footer Styles */
+  .alfooter .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-brand,
+  .footer-links,
+  .footer-social {
+    margin: 15px 0;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .footer-social a {
+    margin: 0 10px;
+  }
+  /* Header */
+  .alheader {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .almail,
+  .almenu {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Main Content */
+  .work-header {
+    flex-wrap: wrap;
+  }
+
+  .work-header .profileheader,
+  .work-header button {
+    flex: 100%;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  .work-header .profileheader .imageandtag img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .workd-container .profile-container img {
+    max-width: 90%;
+  }
+
+  .thumbnails {
+    justify-content: center;
+  }
+
+  .thumbnail {
+    margin: 5px;
+  }
+
+  /* Popups */
+  .popup-content {
+    width: 90%;
+  }
+
+  .popup .thumbnailshaer img,
+  .popup .linkedcopy input {
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* Header Styles */
+  .alheader {
+    padding: 15px 5px;
+  }
+
+  /* Main Content Styles */
+  .wrapperContent .quotes h1 {
+    font-size: 24px;
+  }
+
+  .wrapperContent .quotes h4 {
+    font-size: 13px;
+  }
+  .work-header .profileheader .name-of-thwork,
+  .description p {
+    font-size: 14px;
+  }
+
+  .thumbnails {
+    flex-direction: column;
+  }
+}
