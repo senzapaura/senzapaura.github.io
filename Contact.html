@@ -1,76 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <div class="alcontainer">
-        <div class="alheader">
-            <div class="almail">
-                <div class="almailIcon"><span class="material-icons">
-                    mail
-                    </span></div>
-                <div>khalilhamdouch60@gmail.com</div>
-            </div>
-            <div class="almenu">
-                <div class="almenuItem" id="worksPage">Works</div>
-                <div class="almenuItem" id="resumePage">Resume</div>
-                <div class="almenuItem" id="servicesPage">Services</div>
-                <div class="almenuItem" id="contactPage">Contact</div>
-            </div>
+      <div class="alheader">
+        <div class="almail">
+          <div class="almailIcon">
+            <span class="material-icons"> mail </span>
+          </div>
+          <div>khalilhamdouch60@gmail.com</div>
         </div>
-        <div class="wrapperContent">
-            
-<!-- Contact Form Section -->
-<div class="contact-section">
-    <div class="progress-bar" id="progressBar">
-        <div class="progress-fill" id="progressFill"></div>
-    </div>
-    <form id="contactForm" action="https://formspree.io/f/xoqorlvb" method="POST">
-        <div class="name-email">
-            <div class="namediver">
+        <div class="almenu">
+          <div class="almenuItem" id="worksPage">Works</div>
+          <div class="almenuItem" id="resumePage">Resume</div>
+          <div class="almenuItem" id="servicesPage">Services</div>
+          <div class="almenuItem" id="contactPage">Contact</div>
+        </div>
+      </div>
+      <div class="wrapperContent">
+        <!-- Contact Form Section -->
+        <div class="contact-section">
+          <div class="progress-bar" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <form
+            id="contactForm"
+            action="https://formspree.io/f/xoqorlvb"
+            method="POST"
+          >
+            <div class="name-email">
+              <div class="namediver">
                 <label for="nameInput">Your Name</label>
-                <input type="text" name="name" id="nameInput" placeholder="Your Name" onkeyup="updateProgress()">
-            
-            </div>
+                <input
+                  type="text"
+                  name="name"
+                  id="nameInput"
+                  placeholder="Your Name"
+                  onkeyup="updateProgress()"
+                />
+              </div>
 
-            <div class="namediver">
+              <div class="namediver">
                 <label for="emailInput">Your Email</label>
-                <input type="email" name="_replyto" id="emailInput" placeholder="Your Email" onkeyup="updateProgress()">
-                
+                <input
+                  type="email"
+                  name="_replyto"
+                  id="emailInput"
+                  placeholder="Your Email"
+                  onkeyup="updateProgress()"
+                />
+              </div>
             </div>
-           
-           
-        </div>
 
-       
-        <!-- Subject Dropdown -->
-        <label for="subjectInput">Subject</label>
-        <select name="subject" id="subjectInput" onchange="updateProgress()">
-            <option value="" disabled selected>Select a subject</option>
-            <option value="General Inquiry">General Inquiry</option>
-            <option value="Feedback">Feedback</option>
-            <option value="Support">Support</option>
-            <option value="Collaboration">Collaboration</option>
-            <!-- You can add more subjects as needed -->
-        </select>
-        
-        <label for="messageInput">Your Message</label>
-        <textarea rows="5" name="message" id="messageInput" placeholder="Your Message" onkeyup="updateProgress()"></textarea>
-        
-        <button type="submit" id="submitButton" disabled>Just Send <span class="material-icons">
-            send
-            </span></button>
-    </form>
-    
-</div>
+            <!-- Subject Dropdown -->
+            <label for="subjectInput">Subject</label>
+            <select
+              name="subject"
+              id="subjectInput"
+              onchange="updateProgress()"
+            >
+              <option value="" disabled selected>Select a subject</option>
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Feedback">Feedback</option>
+              <option value="Support">Support</option>
+              <option value="Collaboration">Collaboration</option>
+              <!-- You can add more subjects as needed -->
+            </select>
 
-            
+            <label for="messageInput">Your Message</label>
+            <textarea
+              rows="5"
+              name="message"
+              id="messageInput"
+              placeholder="Your Message"
+              onkeyup="updateProgress()"
+            ></textarea>
+
+            <button type="submit" id="submitButton" disabled>
+              Just Send <span class="material-icons"> send </span>
+            </button>
+          </form>
         </div>
+      </div>
+      <footer class="alfooter">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <img src="assets/img/namefooter.gif" alt="" />
+          </div>
+          <div class="footer-links">
+            <a href="Works.html">Works</a>
+            <a href="Resume.html">Resume</a>
+            <a href="Services.html">Services</a>
+            <a href="Contact.html">Contact</a>
+          </div>
+          <div class="footer-social">
+            <a
+              href="https://github.com/senzapaura"
+              target="_blank"
+              rel="noopener"
+              ><img width="20px" src="assets/img/github.svg" alt=""
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/khalil-hamdouch/"
+              target="_blank"
+              rel="noopener"
+              ><img width="20px" src="assets/img/linkedin.svg" alt=""
+            /></a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2023 Khalil Hamdouch. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
