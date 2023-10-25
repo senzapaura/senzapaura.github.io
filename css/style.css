@@ -102,6 +102,9 @@ a:visited {
   flex-direction: column;
   align-items: center;
 }
+.seravess {
+  padding: 0px 80px;
+}
 .wrapperContent .mayaHeader .imgcontainer {
   height: 200px;
   width: 200px;
@@ -826,6 +829,7 @@ button:hover {
 .technology-section {
   display: flex;
   justify-content: space-between;
+  max-width: 1200px;
 }
 
 .tech-item {
@@ -836,7 +840,6 @@ button:hover {
 
 .tech-item img {
   max-width: 100%;
-  margin-bottom: 20px;
 }
 
 .tech-item h3 {
@@ -846,19 +849,19 @@ button:hover {
 
 .tech-item p {
   margin-bottom: 15px;
-    font-weight: 200;
-    font-size: 13px;
+  font-weight: 200;
+  font-size: 13px;
 }
-.techtat{
+.techtat {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 5px;
 }
 
-.techtat .holder-techta{
-  height: 30px;
-  width: 30px;
+.techtat .holder-techta {
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   background-color: #0000ff;
   display: flex;
@@ -866,8 +869,8 @@ button:hover {
   justify-content: center;
 }
 
-.techtat .holder-techta img{
-width: 25px;
+.techtat .holder-techta img {
+  width: 27px;
 }
 
 .tech-item ul {
@@ -878,8 +881,56 @@ width: 25px;
 .tech-item li {
   display: inline-block;
   margin-right: 10px;
-  background-color: #eee;
   padding: 5px 10px;
   border-radius: 3px;
 }
 
+.htmla,
+.pythorchat {
+  background: rgb(242, 137, 83);
+  background: linear-gradient(
+    100deg,
+    rgba(242, 137, 83, 1) 0%,
+    rgba(253, 235, 45, 1) 100%
+  );
+}
+.cssa {
+  background: rgb(83, 218, 242);
+  background: linear-gradient(
+    100deg,
+    rgba(83, 218, 242, 1) 0%,
+    rgba(45, 163, 253, 1) 100%
+  );
+}
+
+.jsaa,
+.pythorchhat {
+  background: rgb(242, 207, 83);
+  background: linear-gradient(
+    174deg,
+    rgba(242, 207, 83, 1) 0%,
+    rgba(253, 123, 45, 1) 100%
+  );
+}
+
+.pytonat {
+  background: rgb(242, 207, 83);
+  background: linear-gradient(
+    174deg,
+    rgba(242, 207, 83, 1) 0%,
+    rgba(25, 85, 131, 1) 100%
+  );
+}
+
+.sleenia {
+  background: rgb(88, 88, 88);
+  background: linear-gradient(
+    174deg,
+    rgba(88, 88, 88, 1) 0%,
+    rgba(166, 166, 166, 1) 100%
+  );
+}
+
+.techtat h4 {
+  font-size: 14px;
+}
