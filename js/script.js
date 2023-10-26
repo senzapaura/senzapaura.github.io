@@ -146,3 +146,13 @@ document.addEventListener("DOMContentLoaded", function() {
       }
   }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  if (window.innerWidth <= 768) {
+      var alertDiv = document.getElementById('mobileAlert');
+      if (alertDiv) {
+          alertDiv.style.display = 'block';
+          document.body.style.overflow = 'hidden'; // to prevent scrolling
+      }
+  }
+});
