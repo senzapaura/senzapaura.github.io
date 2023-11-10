@@ -1,3 +1,8 @@
+window.addEventListener("load", function () {
+  var loadingDiv = document.getElementById("loadingDiv");
+  loadingDiv.style.display = "none";
+});
+
 document.getElementById("worksPage").addEventListener("click", function () {
   window.location.href = "Works.html";
 });
@@ -13,6 +18,7 @@ document.getElementById("servicesPage").addEventListener("click", function () {
 document.getElementById("contactPage").addEventListener("click", function () {
   window.location.href = "Contact.html";
 });
+
 function changeImage(src) {
   let clickedThumbnail = event.currentTarget;
   let thumbnailsContainer = clickedThumbnail.parentElement;
@@ -37,7 +43,7 @@ function changeImage(src) {
 }
 
 function showPopup(popupId, workId) {
-  if (popupId === 'sharePopup' && workId) {
+  if (popupId === "sharePopup" && workId) {
     const linkInput = document.querySelector(".linkedcopy input");
     linkInput.value = `https://senzapaura.github.io/Works.html#${workId}`;
   }
@@ -57,14 +63,17 @@ function copyLink() {
 document.addEventListener("scroll", function () {
   var workClasses = document.querySelectorAll(".work1class");
 
-  workClasses.forEach(function(container) {
+  workClasses.forEach(function (container) {
     var element = container.querySelector(".sticky-buttons");
     var containerTop = container.offsetTop;
     var containerBottom = containerTop + container.offsetHeight;
     var stickyHeight = element.offsetHeight;
 
     // Check the top boundary
-    if (window.scrollY + 60 >= containerTop && window.scrollY + 60 <= containerBottom - stickyHeight) {
+    if (
+      window.scrollY + 60 >= containerTop &&
+      window.scrollY + 60 <= containerBottom - stickyHeight
+    ) {
       // Within the container bounds, make it sticky
       element.style.position = "fixed";
       element.style.top = "60px";
@@ -78,39 +87,40 @@ document.addEventListener("scroll", function () {
   });
 });
 
-
 // Form submission
 let contactForm = document.getElementById("contactForm");
-if(contactForm) {
-    contactForm.addEventListener("submit", function(event) {
-        event.preventDefault();
+if (contactForm) {
+  contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-        let formData = new FormData(event.target);
+    let formData = new FormData(event.target);
 
-        fetch(event.target.action, {
-            method: "POST",
-            body: formData,
-            headers: {
-                "Accept": "application/json"
-            }
-        }).then(response => {
-            if(response.ok) {
-                let contactSection = document.querySelector(".contact-section");
-                let thankYouMessage = document.getElementById("thankYouMessage");
-                contactSection.classList.add("hidden");
-                setTimeout(function() {
-                    thankYouMessage.style.display = "block";
-                }, 50);
-                setTimeout(function() {
-                    window.location.href = "index.html";
-                }, 2000);
-            } else {
-                console.error("Form submission error:", response.statusText);
-            }
-        }).catch(error => {
-            console.error("Form submission error:", error);
-        });
-    });
+    fetch(event.target.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.ok) {
+          let contactSection = document.querySelector(".contact-section");
+          let thankYouMessage = document.getElementById("thankYouMessage");
+          contactSection.classList.add("hidden");
+          setTimeout(function () {
+            thankYouMessage.style.display = "block";
+          }, 50);
+          setTimeout(function () {
+            window.location.href = "index.html";
+          }, 2000);
+        } else {
+          console.error("Form submission error:", response.statusText);
+        }
+      })
+      .catch((error) => {
+        console.error("Form submission error:", error);
+      });
+  });
 }
 
 function updateProgress() {
@@ -129,30 +139,28 @@ function updateProgress() {
   document.getElementById("progressFill").style.height = progress + "%";
 
   if (progress === 100) {
-      document.getElementById("submitButton").disabled = false;
+    document.getElementById("submitButton").disabled = false;
   } else {
-      document.getElementById("submitButton").disabled = true;
+    document.getElementById("submitButton").disabled = true;
   }
 }
 
-
-
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   if (window.location.hash) {
-      const workId = window.location.hash.substring(1);
-      const workElement = document.getElementById(workId);
-      if (workElement) {
-          workElement.scrollIntoView({ behavior: "smooth" });
-      }
+    const workId = window.location.hash.substring(1);
+    const workElement = document.getElementById(workId);
+    if (workElement) {
+      workElement.scrollIntoView({ behavior: "smooth" });
+    }
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth <= 768) {
-      var alertDiv = document.getElementById('mobileAlert');
-      if (alertDiv) {
-          alertDiv.style.display = 'block';
-          document.body.style.overflow = 'hidden'; // to prevent scrolling
-      }
+    var alertDiv = document.getElementById("mobileAlert");
+    if (alertDiv) {
+      alertDiv.style.display = "block";
+      document.body.style.overflow = "hidden"; // to prevent scrolling
+    }
   }
 });

@@ -25,6 +25,10 @@
     />
   </head>
   <body>
+    <div id="loadingDiv">
+      <img src="assets/img/namefooter.gif" alt="" />
+      <img class="loaderr" src="assets/img/rrr.gif" alt="" />
+    </div>
     <div class="alcontainer">
       <div
         id="mobileAlert"
@@ -47,10 +51,16 @@
       </div>
       <div class="alheader">
         <div class="almail">
-          <div class="almailIcon">
-            <span class="material-icons"> mail </span>
-          </div>
-          <div>khalilhamdouch60@gmail.com</div>
+          <a
+            href="mailto:khalilhamdouch60@gmail.com"
+            target="_blank"
+            class="email-link"
+          >
+            <div class="almailIcon">
+              <span class="material-icons"> mail </span>
+            </div>
+            <div>khalilhamdouch60@gmail.com</div>
+          </a>
         </div>
         <div class="almenu">
           <div class="almenuItem" id="worksPage">Works</div>
@@ -88,7 +98,12 @@
               </div>
             </div>
             <div>
-              <button class="workWithUsBtn">Work with me</button>
+              <button
+                class="workWithUsBtn"
+                onclick="window.location.href='contact.html';"
+              >
+                Work with me
+              </button>
             </div>
           </div>
 
@@ -229,7 +244,12 @@
               </div>
             </div>
             <div>
-              <button class="workWithUsBtn">Work with me</button>
+              <button
+                class="workWithUsBtn"
+                onclick="window.location.href='contact.html';"
+              >
+                Work with me
+              </button>
             </div>
           </div>
 

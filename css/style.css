@@ -72,6 +72,29 @@ a:visited {
   border: none !important;
 }
 
+#loadingDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* High z-index to be on top of other elements */
+}
+
+#loadingDiv img {
+  width: 200px;
+}
+
+#loadingDiv .loaderr {
+  width: 20px;
+}
+
 .alcontainer {
   width: 100vw;
   min-height: 100vh; /* Make the container at least as tall as the viewport */
@@ -174,6 +197,13 @@ a:visited {
 button,
 .almail {
   cursor: pointer;
+}
+
+.almail a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 /* Contact Page Styles */
