@@ -74,7 +74,7 @@ a:visited {
 
 .alcontainer {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh; /* Make the container at least as tall as the viewport */
 }
 .alheader {
   padding: 45px 60px 30px;
@@ -101,6 +101,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1;
 }
 .seravess {
   padding: 0px 80px;
